@@ -1,16 +1,28 @@
-# This is a sample Python script.
+from TitleProcedures import *
+Titl = Title()
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def AddValuesInTitle(name, surname):
+    Titl.AddValuesInTitle(name, surname)
+def UpdateTitle(id, name, surname, type):
+    Titl.UpdateTitle(id, name, surname, type)
+def DeleteTitle(id):
+    Titl.DeleteTitle(id)
+def DeleteTypeOfTitle(id):
+    Titl.DeleteTypeOfTitle(id)
 
+def GetTitle():
+    return Titl.GetTitle()
+def GetUnitsAndTitles():
+    return Titl.GetUnitsAndTitles()
+def GetUsersAndTitles():
+    return Titl.GetUsersAndTitles()
+def GetTitlesByUsers(typeoftitle):
+    return Titl.GetTitlesByUsers(typeoftitle)
+def GetTitlesByUser(id, typeoftitle):
+    return Titl.GetTitlesByUser(id, typeoftitle)
+def GetTitlesByUnits(types):
+    return Titl.GetTitlesByUnits(types)
+def GetTitlesByUnit(id, types):
+    return Titl.GetTitlesByUnit(id, types)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(GetTitlesByUnits(1))
