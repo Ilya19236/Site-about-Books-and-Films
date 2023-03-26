@@ -99,10 +99,9 @@ GO
 create procedure UpdateTitle
 @Id int, 
 @Name nvarchar(50),
-@Surname nvarchar(50),
-@Type int as
+@Surname nvarchar(50) as
 UPDATE [Title]
-set [Name] = @Name, [Surname] = @Surname, [Type] = @Type
+set [Name] = @Name, [Surname] = @Surname
 where [Id] = @Id
 
 GO 
